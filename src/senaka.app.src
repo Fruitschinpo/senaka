@@ -5,11 +5,10 @@
   {mod, { senaka_app, []}},
   {applications,
    [kernel,
-    stdlib
+    stdlib    
    ]},
   {env,[{port, 5222}]},
   {modules, []},
-
   {maintainers, []},
   {licenses, []},
   {links, []}
