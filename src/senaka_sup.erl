@@ -27,7 +27,7 @@ start_link() ->
 %%====================================================================
 
 %% Child :: {Id,StartFunc,Restart,Shutdown,Type,Modules}
-init(_Args) ->
+init(_Args) ->    
     {ok, Port} = application:get_env(senaka, port),
     Flags = #{strategy => one_for_one, intensity => 1, period => 5},
     Children = [child(tcp_server, worker, [Port], [])],
